@@ -1,0 +1,10 @@
+raw
+presentation
+test.cough
+test.litcough
+parser.output
+test/fixtures/underscore
+test/*.js
+examples/beautiful_code/parse.cough
+*.gem
+/node_modules

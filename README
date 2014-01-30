@@ -1,0 +1,70 @@
+  CoughSyrup -- 
+  
+  --------------------------------------------------------------
+  N.B.: This fork of CoffeeScript by Soraismus only
+  minimally modifies the original source code.
+  
+  The current changes to the code allow
+
+  (1) interposition of spaces
+  between functional identifiers and CALL_START tags;
+
+  (2) recognition of implicit left-associative function calls
+  (i.e., function calls in applicative order without 
+  explicit parentheses or CALL_START/CALL_END tags);
+
+  (3) use of backslashes to indicate the beginning of
+  one-parameter parameter lists;
+
+  (4) use of the pattern '\i \j \k ->' to indicate currying
+  (i.e, this pattern is rewritten as '(i) -> (j) -> (k) ->');
+
+  (5) use of semicolons to toggle between applicative and
+  point-free compositional order (i.e, 'f g h' is equivalent
+  to 'f(g)(h)', whereas if 'k = ; f g h', then 'k(0)' is
+  equivalent to 'f(g(h(0)))');
+
+  (6) use of additional characters (e.g., '-', '?', '!')
+  in INDENTIFIERs' names (To accommodate this change, the four
+  existential operators, each of which were formerly represented
+  by '?', have been modified: INDEX_SOAK is now '|'; the binary
+  existential operator is now '??'; and FUNC_EXISTS and the unary
+  existential operator now precede their operands.);
+
+  (7) use of the backtick to immediately compose a pair of
+  functions when in applicative mode and to immediately apply
+  the first of a pair of functions on the second when in
+  compositional mode -- that is,
+    *  '; f `g h ;' is interpreted as '(i) -> f(g(h)(i))' and
+    *  'f `g h j' is interpreted as 'f((i) -> g(h(i)))(j)'
+  --------------------------------------------------------------
+
+  CoffeeScript is a little language that compiles into JavaScript.
+
+  Install Node.js, and then the CoffeeScript compiler:
+  sudo bin/cake install
+
+  Or, if you have the Node Package Manager installed:
+  npm install -g coffee-script
+  (Leave off the -g if you don't wish to install globally.)
+
+  Execute a script:
+  coffee /path/to/script.coffee
+
+  Compile a script:
+  coffee -c /path/to/script.coffee
+
+  For documentation, usage, and examples, see:
+  http://coffeescript.org/
+
+  To suggest a feature, report a bug, or general discussion:
+  http://github.com/jashkenas/coffee-script/issues/
+
+  If you'd like to chat, drop by #coffeescript on Freenode IRC,
+  or on webchat.freenode.net.
+
+  The source repository:
+  git://github.com/jashkenas/coffee-script.git
+
+  Top 100 contributors are listed here:
+  http://github.com/jashkenas/coffee-script/contributors

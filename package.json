@@ -1,0 +1,35 @@
+{
+  "name":         "cough-syrup",
+  "description":  "Unfancy JavaScript",
+  "keywords":     ["javascript", "language", "coughsyrup", "coffeescript", "compiler", "Jeremy Ashkenas"],
+  "author":       "Matthew Hilty",
+  "version":      "0.9.0",
+  "license":      "MIT",
+  "engines":      {
+    "node":       ">=0.8.0"
+  },
+  "directories" : {
+    "lib" : "./lib/cough-syrup"
+  },
+  "main" : "./lib/cough-syrup/cough-syrup",
+  "bin":          {
+    "cough":     "./bin/cough",
+    "cake":       "./bin/cake"
+  },
+  "scripts": {
+    "test": "node ./bin/cake test"
+  },
+  "homepage":     "",
+  "bugs":         "",
+  "repository":   {
+    "type": "git",
+    "url": "git://github.com/soraismus/coffee-script.git"
+  },
+  "devDependencies": {
+    "uglify-js":  "~2.2",
+    "jison":      ">=0.2.0"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5"
+  }
+}
